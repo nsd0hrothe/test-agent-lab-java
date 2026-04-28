@@ -1,51 +1,113 @@
+<div align="center">
+
 🌐 [Português (BR)](README.pt_BR.md) | [Español](README.es.md)
 
-# Soc Ops
+---
 
-Social Bingo game for in-person mixers. Find people who match the questions and get 5 in a row!
+```
+ ___  ___  ___     ___  ___  ___
+/ __|| _ \/ __|   / _ \| _ \/ __| 
+\__ \|   / (__   | (_) |  _/\__ \
+|___/|_|_\\___|   \___/|_|  |___/
+```
 
-📚 **[View Lab Guide](workshop/GUIDE.md)**
+### **Social Bingo for Real People**
+
+*Break the ice. Find your people. Shout BINGO.*
+
+[![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=flat-square&logo=spring)](https://spring.io/projects/spring-boot)
+[![Java](https://img.shields.io/badge/Java-21-ED8B00?style=flat-square&logo=openjdk)](https://adoptium.net/)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
+
+**[▶ Start the Lab](workshop/GUIDE.md)** · **[Jump to Setup](workshop/01-setup.md)** · **[Run Locally](#run-it-locally)**
+
+</div>
 
 ---
 
-## 📚 Lab Guide
+## What is Soc Ops?
 
-| Part | Title |
-|------|-------|
-| [**00**](workshop/00-overview.md) | Overview & Checklist |
-| [**01**](workshop/01-setup.md) | Setup & Context Engineering |
-| [**02**](workshop/02-design.md) | Design-First Frontend |
-| [**03**](workshop/03-quiz-master.md) | Custom Quiz Master |
-| [**04**](workshop/04-multi-agent.md) | Multi-Agent Development |
+Soc Ops turns awkward room-fillers into **genuine human connections**. It's a live Social Bingo webapp built with Spring Boot + Thymeleaf — each card is a 5×5 grid of icebreaker prompts. Walk the room, find matches, mark your card. First to five in a row wins.
 
-> 📝 Lab guides are also available in the [`workshop/`](workshop/) folder for offline reading.
+> Built as a hands-on GitHub Copilot workshop: you don't just play the game, you **build and extend it** using AI-assisted development.
 
 ---
 
-## Prerequisites
+## What You'll Build
 
-- [Java 21 JDK](https://adoptium.net/) or higher
-- [Apache Maven 3.9+](https://maven.apache.org/) (or use the included Maven Wrapper)
+| # | Stage | You'll learn |
+|---|-------|-------------|
+| [**00 — Overview**](workshop/00-overview.md) | Big picture & checklist | How the lab is structured |
+| [**01 — Setup**](workshop/01-setup.md) | Context engineering | Copilot instructions & project config |
+| [**02 — Design**](workshop/02-design.md) | Design-first frontend | Skills, UI iteration, Thymeleaf |
+| [**03 — Quiz Master**](workshop/03-quiz-master.md) | Custom agent | Generating fun prompts with a persona |
+| [**04 — Multi-Agent**](workshop/04-multi-agent.md) | Agent orchestration | TDD + multi-agent workflows |
 
-## Run
+> All guides are also available offline in the [`workshop/`](workshop/) folder.
+
+---
+
+## The Tech Stack
+
+```
+┌─────────────────────────────────────────────┐
+│  Browser  →  Thymeleaf templates             │
+│  REST API →  Spring Boot (BingoRestController)│
+│  Logic    →  BoardAssembler + IcebreakerPrompts│
+│  Style    →  Custom CSS (app.css)             │
+└─────────────────────────────────────────────┘
+```
+
+---
+
+## Run It Locally
+
+**Prerequisites:** Java 21+ · Maven 3.9+ (or use the wrapper)
 
 ```bash
+# Clone & start
 cd socops
 ./mvnw spring-boot:run
 ```
 
-## Build
+Open [http://localhost:8080](http://localhost:8080) — your bingo card is waiting.
 
 ```bash
-cd socops
+# Build a JAR
 ./mvnw clean package
-```
 
-## Test
-
-```bash
-cd socops
+# Run all tests
 ./mvnw test
 ```
 
-Deploys automatically to GitHub Pages on push to `main`.
+---
+
+## Project Layout
+
+```
+socops/src/main/
+├── java/com/socops/
+│   ├── data/          # Icebreaker prompt bank
+│   ├── model/         # BingoCell, PlayPhase, WinningStreak
+│   ├── service/       # BoardAssembler (card generation logic)
+│   └── web/           # BingoRestController (API endpoints)
+└── resources/
+    ├── templates/     # game.html  (Thymeleaf)
+    └── static/css/    # app.css
+```
+
+---
+
+## Contributing
+
+PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Please follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+---
+
+<div align="center">
+
+*Deploys automatically to GitHub Pages on push to `main`.*
+
+**[Start the workshop →](workshop/GUIDE.md)**
+
+</div>
