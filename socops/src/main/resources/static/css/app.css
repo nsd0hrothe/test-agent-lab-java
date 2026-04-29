@@ -10,8 +10,24 @@ body {
 }
 
 body {
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: 'Courier New', 'Courier', monospace;
     -webkit-tap-highlight-color: transparent;
+    background-color: var(--dark-bg, #0a0e27);
+    color: var(--text-primary, #ffffff);
+}
+
+/* ── CSS variables for cyberpunk dark theme ──────────────────── */
+:root {
+    --dark-bg: #0a0e27;
+    --dark-bg-secondary: #1a1f3a;
+    --neon-cyan: #00d9ff;
+    --neon-pink: #ff1493;
+    --neon-lime: #39ff14;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b8c8;
+    --glow-sm: 0 0 8px;
+    --glow-md: 0 0 12px;
+    --glow-lg: 0 0 16px;
 }
 
 /* ── sizing ────────────────────────────────────────────────────── */
@@ -67,7 +83,9 @@ body {
 .bg-accent     { background-color: #2563eb; }
 .bg-marked     { background-color: #dcfce7; }
 .bg-black\/50  { background-color: rgba(0, 0, 0, 0.5); }
-
+/* ── dark theme backgrounds ──────────────────────────────────── */
+.bg-dark           { background-color: var(--dark-bg); }
+.bg-dark-secondary { background-color: var(--dark-bg-secondary); }
 /* ── text colours ──────────────────────────────────────────────── */
 .text-white     { color: #ffffff; }
 .text-gray-500  { color: #6b7280; }
@@ -80,6 +98,12 @@ body {
 .text-amber-500 { color: #f59e0b; }
 .text-amber-800 { color: #92400e; }
 .text-amber-900 { color: #78350f; }
+
+/* ── neon text colors ────────────────────────────────────────── */
+.text-neon-cyan  { color: var(--neon-cyan); }
+.text-neon-pink  { color: var(--neon-pink); }
+.text-neon-lime  { color: var(--neon-lime); }
+.text-secondary  { color: var(--text-secondary); }
 
 /* ── typography ────────────────────────────────────────────────── */
 .text-xs  { font-size: 0.75rem;  line-height: 1rem; }
@@ -103,6 +127,10 @@ body {
 .border-amber-400    { border-color: #fbbf24; }
 .border-marked-border { border-color: #22c55e; }
 
+/* ── neon borders ────────────────────────────────────────────── */
+.border-neon-cyan { border-color: var(--neon-cyan); }
+.border-neon-pink { border-color: var(--neon-pink); }
+
 /* ── radii ─────────────────────────────────────────────────────── */
 .rounded    { border-radius: 0.25rem; }
 .rounded-lg { border-radius: 0.5rem; }
@@ -112,6 +140,11 @@ body {
 .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
 .shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
                           0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+
+/* ── neon glow effects ───────────────────────────────────────── */
+.glow-cyan { box-shadow: 0 0 12px var(--neon-cyan), 0 0 24px rgba(0, 217, 255, 0.3); }
+.glow-pink { box-shadow: 0 0 12px var(--neon-pink), 0 0 24px rgba(255, 20, 147, 0.3); }
+.glow-lime { box-shadow: 0 0 12px var(--neon-lime), 0 0 24px rgba(57, 255, 20, 0.3); }
 
 /* ── spacing between children ──────────────────────────────────── */
 .space-y-2 > * + * { margin-top: 0.5rem; }
