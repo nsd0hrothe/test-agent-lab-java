@@ -17,24 +17,72 @@
 <!-- ============================================================= -->
 <!--  LOBBY — visible before a game starts                          -->
 <!-- ============================================================= -->
-<div id="lobbyView" class="flex flex-col items-center justify-center min-h-full p-6 bg-dark">
-    <div class="text-center max-w-sm">
-        <h1 class="text-4xl font-bold text-neon-cyan mb-2">Soc Ops</h1>
-        <p class="text-lg text-secondary mb-8">Social Bingo</p>
+<div id="lobbyView" class="lobby-shell min-h-full bg-dark">
+    <div class="lobby-grid">
+        <section class="hero-panel hero-copy reveal-rise">
+            <p class="hero-kicker">Neon Icebreaker Protocol</p>
+            <h1 class="hero-title">
+                Turn a room full of strangers into your first bingo line.
+            </h1>
+            <p class="hero-lead">
+                Soc Ops turns networking into a fast social mission: scan the room, match the prompts,
+                and race your table to a five-square streak.
+            </p>
 
-        <div class="bg-dark-secondary rounded-lg p-6 shadow-sm border border-neon-cyan mb-8 glow-cyan">
-            <h2 class="font-semibold text-neon-pink mb-3">How to play</h2>
-            <ul class="text-left text-secondary text-sm space-y-2">
-                <li>• Find people who match the questions</li>
-                <li>• Tap a square when you find a match</li>
-                <li>• Get 5 in a row to win!</li>
-            </ul>
-        </div>
+            <div class="hero-actions reveal-rise reveal-delay-1">
+                <button onclick="launchGame()"
+                        class="hero-cta accent-active transition-colors">
+                    Launch Round
+                </button>
+                <p class="hero-meta">25 prompts. 1 free square. Infinite awkward-silence prevention.</p>
+            </div>
 
-        <button onclick="launchGame()"
-                class="w-full bg-dark-secondary text-neon-cyan font-semibold py-4 px-8 rounded-lg text-lg accent-active transition-colors border border-neon-cyan glow-cyan">
-            Start Game
-        </button>
+            <div class="hero-stats reveal-rise reveal-delay-2">
+                <div class="stat-chip">
+                    <span class="stat-value">5x5</span>
+                    <span class="stat-label">live bingo grid</span>
+                </div>
+                <div class="stat-chip">
+                    <span class="stat-value">2 min</span>
+                    <span class="stat-label">to spark a room</span>
+                </div>
+                <div class="stat-chip">
+                    <span class="stat-value">1 goal</span>
+                    <span class="stat-label">make people talk</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero-panel hero-side reveal-rise reveal-delay-1">
+            <div class="signal-card glow-pink">
+                <p class="signal-label">Mission Flow</p>
+                <ol class="flow-list text-secondary">
+                    <li><span>01</span> Scan the board for an easy opener.</li>
+                    <li><span>02</span> Find someone who matches the square.</li>
+                    <li><span>03</span> Lock the tile and chase a streak.</li>
+                </ol>
+            </div>
+
+            <div class="brief-card reveal-rise reveal-delay-2">
+                <div class="brief-header">
+                    <p class="brief-title">Field Notes</p>
+                    <span class="brief-badge">Live</span>
+                </div>
+                <ul class="brief-list text-secondary">
+                    <li>Prompts are built for quick conversations, not perfect answers.</li>
+                    <li>The center square is free, so momentum starts immediately.</li>
+                    <li>One clean row in any direction triggers bingo.</li>
+                </ul>
+            </div>
+
+            <div class="radar-card reveal-rise reveal-delay-3">
+                <p class="radar-title">Why it works</p>
+                <p class="text-secondary">
+                    The board gives people a reason to approach each other, a script for the first sentence,
+                    and a shared objective that keeps the energy moving.
+                </p>
+            </div>
+        </section>
     </div>
 </div>
 
