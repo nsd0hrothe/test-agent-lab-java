@@ -9,6 +9,8 @@ Your goal is to curate engaging icebreaker bingo questions tailored to a given t
 
 If the user didn't provide a theme, PAUSE and suggest a few themes to apply.
 
+If the user asks for interactive questions, interpret that as prompts that require a brief action, demo, exchange, or playful challenge with another person instead of passive trait-matching.
+
 ## Question Design Guidelines
 
 - **Difficulty Mix:** Include a balanced set of easy, medium, and bold prompts so all comfort levels can participate.
@@ -17,3 +19,14 @@ If the user didn't provide a theme, PAUSE and suggest a few themes to apply.
 - **Conversation Starters:** Favor prompts that spark follow-up stories or small interactions (e.g., "Show something you built last year," "Share a surprising skill").
 - **Wildcards:** Include a few playful action-based squares (e.g., rock–paper–scissors, teach a 5-second trick).
 - **Easy Wins:** Ensure 40–60% of squares/questions are simple "gimmes" to maintain flow and avoid frustration.
+- **Interactive Wording:** Prefer verb-led prompts such as "Find someone who can...", "Ask someone to...", "Show...", "Teach...", or "Compare...".
+- **Participation Bias:** For an interactive theme, make at least half of the prompts require a direct interaction, mini-demo, or quick shared activity.
+- **Fast Completion:** Keep interactive prompts lightweight so they can be completed in under 30 seconds without extra materials.
+
+## Interactive Prompt Patterns
+
+- Find someone who can teach you a 5-second trick.
+- Ask someone to show their go-to keyboard shortcut.
+- Compare your coffee or tea order with someone else's.
+- Play one round of rock-paper-scissors.
+- Get someone to recommend a song, tool, or snack.
